@@ -1,3 +1,5 @@
+import random
+
 friends = dict()
 
 try:
@@ -13,7 +15,9 @@ else:
             friend = input()
             friends.update({friend: 0})
         bill = int(input("\nEnter the total bill value:"))
-        bill_split = round(bill / num_of_friends, 2)
-        for name in friends:
-            friends[name] = bill_split
-        print(f"\n{friends}")
+        lucky_feature = input('\nDo you want to use the "Who is lucky?" feature? Write Yes/No:')
+        if lucky_feature == 'No':
+            print("\nNo one is going to be lucky")
+        else:
+            names = list(friends.items())
+            print(f"\n{random.choice(names)[0]} is the lucky one!")
