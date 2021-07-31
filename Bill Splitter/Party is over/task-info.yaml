@@ -88,5 +88,8 @@ files:
         BillSplitterTest().run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/projects/175/stages/904/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 31 Jul 2021 12:58:45 UTC
 record: -1

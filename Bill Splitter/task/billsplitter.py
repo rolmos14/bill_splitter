@@ -18,6 +18,16 @@ else:
         lucky_feature = input('\nDo you want to use the "Who is lucky?" feature? Write Yes/No:')
         if lucky_feature == 'No':
             print("\nNo one is going to be lucky")
+            bill_split = round(bill / num_of_friends, 2)
+            for name in friends:
+                friends[name] = bill_split
+            print(f"\n{friends}")
         else:
+            bill_split = round(bill / (num_of_friends - 1), 2)
+            for name in friends:
+                friends[name] = bill_split
             names = list(friends.items())
-            print(f"\n{random.choice(names)[0]} is the lucky one!")
+            lucky_one = random.choice(names)[0]
+            friends[lucky_one] = 0
+            print(f"\n{lucky_one} is the lucky one!")
+            print(f"\n{friends}")
